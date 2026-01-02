@@ -40,49 +40,41 @@
       color: var(--text);
     }
 
-    /* AUDIT SUMMARY - Functional output style */
-    .audit-summary {
-      border: 1px solid var(--border);
-      border-radius: 8px;
+    /* SHARE CARD - Receipt style */
+    .share-card {
+      background: transparent;
+      color: var(--text);
+      padding: 1.5rem 0;
       margin: 0 0 2rem 0;
-      overflow: hidden;
+      text-align: left;
+      border-bottom: 2px dashed var(--investigate);
     }
-    .summary-stat {
-      display: flex;
-      align-items: baseline;
-      padding: 0.875rem 1rem;
-      border-bottom: 1px solid var(--border);
-      gap: 1rem;
-    }
-    .summary-stat:last-child {
-      border-bottom: none;
-    }
-    .summary-stat.stat-savings {
-      border-left: 4px solid var(--keep);
-      background: color-mix(in srgb, var(--keep) 8%, var(--bg));
-    }
-    .summary-stat.stat-cancelled {
-      border-left: 4px solid #666;
-    }
-    .summary-stat.stat-pending {
-      border-left: 4px solid var(--investigate);
-    }
-    .summary-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-      min-width: 80px;
-    }
-    .summary-value {
-      font-family: monospace;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-    .summary-detail {
-      font-family: monospace;
+    .share-card .scope {
       font-size: 0.875rem;
       color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .share-card .breakdown {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .share-card h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+    .share-card h1 span {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .share-card .timestamp {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 1rem;
     }
 
     /* Rest of page header */
@@ -135,9 +127,9 @@
       letter-spacing: 0.5px;
     }
     .badge-pending { background: var(--pending-border); color: #000; }
-    .badge-cancelled { background: #666; color: white; }
+    .badge-cancelled { background: var(--keep); color: white; }
     .badge-investigate { background: var(--investigate); color: white; }
-    .badge-keep { background: var(--keep); color: white; }
+    .badge-keep { background: #666; color: white; }
 
     /* Table */
     table { border-collapse: collapse; width: 100%; }
@@ -230,21 +222,12 @@
 </head>
 <body>
 
-<!-- AUDIT SUMMARY - Update values after analysis -->
-<div class="audit-summary">
-  <div class="summary-stat stat-savings">
-    <span class="summary-label">Saving</span>
-    <span class="summary-value">$X,XXX/mo</span>
-    <span class="summary-detail">$XX,XXX/yr</span>
-  </div>
-  <div class="summary-stat stat-cancelled">
-    <span class="summary-label">Cancelled</span>
-    <span class="summary-value">N subscriptions</span>
-  </div>
-  <div class="summary-stat stat-pending">
-    <span class="summary-label">Reviewed</span>
-    <span class="summary-value">N transactions</span>
-  </div>
+<!-- SHARE CARD - Update after analysis -->
+<div class="share-card">
+  <p class="scope">found N subscriptions · N transactions</p>
+  <p class="breakdown">Cancelled N · Keeping N</p>
+  <h1>Saving $XX,XXX/yr <span>($X,XXX/mo)</span></h1>
+  <p class="timestamp">DATE</p>
 </div>
 
 <p class="page-meta">

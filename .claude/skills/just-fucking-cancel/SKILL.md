@@ -31,10 +31,11 @@ Ask in batches of 5-10 to avoid overwhelming.
 
 ### 4. Generate HTML Audit
 Copy [template.html](assets/template.html) and populate:
-- Update audit summary stats:
-  - Saving: monthly and yearly amounts
-  - Cancelled: number of subscriptions cancelled
-  - Reviewed: total transactions analyzed
+- Update header summary:
+  - Scope line: "found N subscriptions · N transactions"
+  - Breakdown: "Cancelled N · Keeping N"
+  - Savings: yearly amount big, monthly in parentheses
+  - Timestamp: current date
 - Add rows to appropriate sections (cancelled/investigate/keep)
 - Include notes from user responses
 
@@ -52,9 +53,9 @@ For each service:
 ## HTML Structure
 
 Three sections, auto-hide when empty:
-- **Cancelled** (grey, strikethrough) - Done items
-- **Needs Decision** (orange) - Has checkboxes for cancel selection
-- **Keeping** (green) - No checkboxes, just reference
+- **Cancelled** (green badge, strikethrough) - Done items, the win
+- **Needs Decision** (orange badge) - Has checkboxes for cancel selection
+- **Keeping** (grey badge) - No checkboxes, just reference
 
 Features:
 - Floating copy button appears when items checked
