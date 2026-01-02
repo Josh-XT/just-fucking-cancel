@@ -47,16 +47,16 @@
       padding: 1.5rem 0;
       margin: 0 0 2rem 0;
       text-align: left;
-      border-bottom: 2px dashed var(--investigate);
+      border-bottom: 2px dashed var(--accent);
     }
     .share-card .scope {
       font-size: 0.875rem;
-      color: var(--muted);
+      color: var(--accent);
       margin-bottom: 0.75rem;
     }
     .share-card .breakdown {
       font-size: 1.1rem;
-      color: var(--text);
+      color: var(--accent);
       margin-bottom: 0.5rem;
     }
     .share-card h1 {
@@ -226,8 +226,8 @@
 <div class="share-card">
   <p class="scope">found N subscriptions · N transactions</p>
   <p class="breakdown">Cancelled N · Keeping N</p>
-  <h1>Saving $XX,XXX/yr <span>($X,XXX/mo)</span></h1>
-  <p class="timestamp">DATE</p>
+  <h1>just saved $XX,XXX/yr <span>($X,XXX/mo)</span></h1>
+  <p class="timestamp">last run DATE at TIME</p>
 </div>
 
 <p class="page-meta">
@@ -239,7 +239,7 @@
 <div class="section" id="section-cancelled">
   <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
     <span class="badge badge-cancelled">Done</span>
-    <h2>Cancelled</h2>
+    <h2>Cancel</h2>
     <span class="section-count" data-section="cancelled"></span>
   </div>
   <table>
