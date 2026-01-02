@@ -1,6 +1,6 @@
 # Getting Started
 
-Never used a terminal before? This guide assumes nothing and gets you from zero to watching Claude cancel your subscriptions in about 15 minutes.
+Never used a terminal before?
 
 ## What You're About to Do
 
