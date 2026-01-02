@@ -8,5 +8,6 @@ subscription-audit.html
 # OS files
 .DS_Store
 
-# Claude settings
-.claude/
+# Claude settings (except skills)
+.claude/*
+!.claude/skills/
